@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Card } from '@/components/ui/card';
 import { Timer, Users, AlertCircle } from 'lucide-react';
 import { starter_pricing } from '@/lib/defaults';
+import Link from 'next/link';
 
 const CountdownTimer = () => {
   // Set end date to 7 days from now
@@ -55,7 +56,7 @@ const CountdownTimer = () => {
 
   return (
     <div className="fixed bottom-4 right-4 z-50">
-        <a href={starter_pricing}>
+        <Link href={starter_pricing}>
         <Card className="bg-black/95 border border-white/10 p-4 shadow-2xl backdrop-blur-sm">
         <div className="space-y-4">
           {/* Early Bird Offer */}
@@ -103,7 +104,7 @@ const CountdownTimer = () => {
         
         </div>
         </Card>
-        </a>
+        </Link>
       </div>
   );
 };
