@@ -1,7 +1,7 @@
 'use client'
 import React, { useState, useEffect } from 'react';
 import { Card } from '@/components/ui/card';
-import { Timer, Users, AlertCircle, Link } from 'lucide-react';
+import { Timer, Users, AlertCircle } from 'lucide-react';
 import { starter_pricing } from '@/lib/defaults';
 
 const CountdownTimer = () => {
@@ -13,7 +13,7 @@ const CountdownTimer = () => {
     seconds: 60
   });
 
-  
+
   const [spotsLeft, setSpotsLeft] = useState(50);
 
   useEffect(() => {
