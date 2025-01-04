@@ -3,7 +3,7 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { ArrowRight, CheckCircle, ChevronRight, Clock, Code, Globe, Quote, Star, Timer, Users } from 'lucide-react';
-import { premium_pricing_url, waitlist_url } from '@/lib/defaults';
+import { premium_pricing_url, starter_pricing, waitlist_url } from '@/lib/defaults';
 import Link from 'next/link';
 import CountdownTimer from '@/components/app/countdown-timer';
 
@@ -172,10 +172,12 @@ const Pricing = () => (
                 </div>
               ))}
             </div>
+            <Link href={starter_pricing}>
             <Button className="w-full h-14 text-lg bg-white/10 hover:bg-white/20 group">
               Get Early-Bird Price
               <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Button>
+            </Link>
           </CardContent>
         </Card>
 

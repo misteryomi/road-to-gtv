@@ -1,6 +1,8 @@
+'use client'
 import React, { useState, useEffect } from 'react';
 import { Card } from '@/components/ui/card';
-import { Timer, Users, AlertCircle } from 'lucide-react';
+import { Timer, Users, AlertCircle, Link } from 'lucide-react';
+import { starter_pricing } from '@/lib/defaults';
 
 const CountdownTimer = () => {
   // Set end date to 7 days from now
@@ -52,12 +54,13 @@ const CountdownTimer = () => {
 
   return (
     <div className="fixed bottom-4 right-4 z-50">
-      <Card className="bg-black/95 border border-white/10 p-4 shadow-2xl backdrop-blur-sm">
+        <Card className="bg-black/95 border border-white/10 p-4 shadow-2xl backdrop-blur-sm">
+        <a href={starter_pricing}>
         <div className="space-y-4">
           {/* Early Bird Offer */}
           <div className="flex items-center text-blue-400 mb-2">
             <AlertCircle className="w-4 h-4 mr-2" />
-            <span className="text-sm font-medium">Early Bird Offer</span>
+            <span className="text-sm font-medium">Get Early Bird Offer</span>
           </div>
 
           {/* Price */}
@@ -95,9 +98,12 @@ const CountdownTimer = () => {
               ⚡ High demand: {spotsLeft} {spotsLeft === 1 ? 'spot' : 'spots'} remaining at this price
             </div>
           )}
+
+        
         </div>
-      </Card>
-    </div>
+        </a>
+        </Card>
+      </div>
   );
 };
 
