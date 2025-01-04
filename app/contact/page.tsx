@@ -1,9 +1,6 @@
 'use client'
 import React from 'react';
-import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
 import { Mail, MessageSquare, Clock } from 'lucide-react';
 
 const ContactPage = () => {
