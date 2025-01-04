@@ -2,9 +2,12 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { ArrowRight, CheckCircle, ChevronRight, Clock, Code, Globe, Quote, Star, Users } from 'lucide-react';
+import { ArrowRight, CheckCircle, ChevronRight, Clock, Code, Globe, Quote, Star, Timer, Users } from 'lucide-react';
 import { premium_pricing_url, waitlist_url } from '@/lib/defaults';
 import Link from 'next/link';
+import CountdownTimer from '@/components/app/countdown-timer';
+
+
 
 const GlowingBackground = () => (
   <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 blur-3xl" />
@@ -27,13 +30,16 @@ const Hero = () => (
           <p className="text-xl text-gray-400 mb-8">
             Join our community of tech professionals and learn how to present your achievements effectively for the Global Talent Visa application. Comprehensive guidance based on real experiences.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-          <Link href={"#pricing"}>
+          <CountdownTimer />
+          <div className="flex flex-col sm:flex-row gap-4 mt-8">          
+            <Link href={"#pricing"}>
+
             <Button className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 group">
-              Secure Your Spot Now
+              Secure Early-Bird Price
               <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Button>
             </Link>
+
             <div className="flex items-center text-sm text-gray-400">
               <Clock className="w-4 h-4 mr-2" />
               Next cohort starts in 7 days
@@ -130,15 +136,25 @@ const Pricing = () => (
         <Card className="bg-white/5 border-white/10 backdrop-blur-xl overflow-hidden">
           <CardContent className="p-8">
             <div className="text-center mb-8">
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-gray-500/10 text-gray-400 mb-6">
-                Self-Guided Package
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 text-blue-400 mb-6">
+                <Timer className="w-4 h-4 mr-2" />
+                <span>Early-Bird Offer</span>
               </div>
               <h3 className="text-3xl font-bold text-white mb-4">Starter Package</h3>
-              <div className="flex justify-center items-baseline mb-4">
-                <span className="text-4xl font-bold text-white">£499</span>
-                <span className="text-xl text-gray-400 line-through ml-2">£999</span>
+              <div className="flex justify-center items-baseline mb-2">
+                <span className="text-4xl font-bold text-white">£299</span>
+                <span className="text-xl text-gray-400 line-through ml-2">£499</span>
               </div>
-              <p className="text-gray-400">Essential guidance for your application</p>
+              <p className="text-blue-400">Save £200 - Limited Time</p>
+              <div className="mt-4 bg-white/5 rounded-lg p-3">
+                <div className="text-sm text-gray-300 mb-2">
+                  <Users className="w-4 h-4 inline mr-2 text-blue-400" />
+                  Only {50} spots left at this price
+                </div>
+                <div className="w-full bg-white/10 rounded-full h-1.5">
+                  <div className="bg-gradient-to-r from-blue-500 to-purple-500 h-1.5 rounded-full" style={{ width: '45%' }} />
+                </div>
+              </div>
             </div>
             <div className="space-y-4 mb-8">
               {[
@@ -147,7 +163,8 @@ const Pricing = () => (
                 "Community Forum Access",
                 "Document Guidelines",
                 "Email Support",
-                "6 Months Access"
+                "6 Months Access",
+                "Future £300 Credit Towards Premium"
               ].map((feature, index) => (
                 <div key={index} className="flex items-center text-white">
                   <CheckCircle className="w-5 h-5 text-gray-400 mr-3 flex-shrink-0" />
@@ -155,11 +172,10 @@ const Pricing = () => (
                 </div>
               ))}
             </div>
-            <Link href={waitlist_url}>
-              <Button className="w-full h-14 text-lg bg-white/10 hover:bg-white/20">
-                Join the waitlist
-              </Button>
-            </Link>
+            <Button className="w-full h-14 text-lg bg-white/10 hover:bg-white/20 group">
+              Get Early-Bird Price
+              <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Button>
           </CardContent>
         </Card>
 
