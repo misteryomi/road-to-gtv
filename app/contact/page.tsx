@@ -7,10 +7,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Mail, MessageSquare, Clock } from 'lucide-react';
 
 const ContactPage = () => {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission
-  };
+
 
   return (
     <div className="min-h-screen bg-black">
