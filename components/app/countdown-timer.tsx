@@ -54,8 +54,8 @@ const CountdownTimer = () => {
 
   return (
     <div className="fixed bottom-4 right-4 z-50">
-        <Card className="bg-black/95 border border-white/10 p-4 shadow-2xl backdrop-blur-sm">
         <a href={starter_pricing}>
+        <Card className="bg-black/95 border border-white/10 p-4 shadow-2xl backdrop-blur-sm">
         <div className="space-y-4">
           {/* Early Bird Offer */}
           <div className="flex items-center text-blue-400 mb-2">
@@ -101,8 +101,8 @@ const CountdownTimer = () => {
 
         
         </div>
-        </a>
         </Card>
+        </a>
       </div>
   );
 };
