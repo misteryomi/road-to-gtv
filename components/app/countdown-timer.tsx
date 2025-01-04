@@ -13,6 +13,7 @@ const CountdownTimer = () => {
     seconds: 60
   });
 
+  
   const [spotsLeft, setSpotsLeft] = useState(50);
 
   useEffect(() => {
