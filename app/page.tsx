@@ -190,7 +190,7 @@ const Pricing = () => (
               </div>
               <h3 className="text-3xl font-bold text-white mb-4">Premium Success Package</h3>
               <div className="flex justify-center items-baseline mb-4">
-                <span className="text-4xl font-bold text-white">£2,999</span>
+                <span className="text-4xl font-bold text-white">£2,599</span>
                 <span className="text-xl text-gray-400 line-through ml-2">£4,999</span>
               </div>
               <p className="text-gray-400">Comprehensive guidance with personal support</p>
@@ -239,7 +239,7 @@ const AboutMe = () => (
         <div className="relative">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl transform rotate-3" />
           <img 
-            src="https://file.notion.so/f/f/5a974aa8-9e6c-40de-81b1-c37ca789b6bf/f62357da-f4fa-42a5-8381-253704ae5bf1/6c988f70-b6f3-4e16-80a1-8f892255898c.jpg?table=block&id=1719770d-8ab9-8062-b2e6-e7c249d5e6cc&spaceId=5a974aa8-9e6c-40de-81b1-c37ca789b6bf&expirationTimestamp=1736013600000&signature=1a3fJIwbUowx2O0G_5hocrhzD2F_2hv2N-GJXoqcEfA&downloadName=6c988f70-b6f3-4e16-80a1-8f892255898c.JPG.jpg" 
+            src="/yomi.jpg" 
             alt="Oluwayomi Omotoso" 
             className="relative rounded-2xl shadow-2xl transform -rotate-3 hover:rotate-0 transition duration-300"
           />
