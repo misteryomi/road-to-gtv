@@ -190,7 +190,7 @@ const Pricing = () => (
               </div>
               <h3 className="text-3xl font-bold text-white mb-4">Premium Success Package</h3>
               <div className="flex justify-center items-baseline mb-4">
-                <span className="text-4xl font-bold text-white">£2,599</span>
+                <span className="text-4xl font-bold text-white"><span className={"text-sm font-normal"}>from</span> £2,599</span>
                 <span className="text-xl text-gray-400 line-through ml-2">£4,999</span>
               </div>
               <p className="text-gray-400">Comprehensive guidance with personal support</p>
@@ -204,7 +204,7 @@ const Pricing = () => (
                 "Priority Email Support (24h)",
                 "Monthly 1:1 Progress Check",
                 "Application Evidence Organization Help",
-                "12 Months Access to Updates",
+                // "12 Months Access to Updates",
                 "Document Templates & Guidelines"
               ].map((feature, index) => (
                 <div key={index} className="flex items-center text-white">
@@ -218,6 +218,7 @@ const Pricing = () => (
               <Button className="w-full h-14 text-lg bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600">
                 Get Personalized Support
               </Button>
+              <p className={"text-center text-sm text-white py-3"}>Or send a mail to <a className={"underline"} href={"mailto:support@roadtogtv.com"}>support@roadtogtv.com</a></p>
             </Link>
             
             </div>
